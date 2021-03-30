@@ -1,0 +1,23 @@
+/* 
+    Ang. posisjonering via "position":
+    1) https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning
+    2) https://www.w3schools.com/css/css_positioning.asp 
+*/
+
+#spel {
+    position: relative;
+    background-image: url(bileter/bakgrunn.png);
+    width: 288px;
+    height: 384px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+#fugl {
+    position: absolute;
+    background-image: url(bileter/fugl-liten.png);
+    width: 50px;
+    height: 46px;
+    left: 40px;
+}

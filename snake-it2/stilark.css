@@ -1,0 +1,17 @@
+body {
+    background-color: #e0e0e0;
+    text-align: center;
+}
+
+#innpakning {
+    position: relative;
+    width: 450px;
+    margin: auto;
+}
+
+#slangeCanvas {
+    border: 2px solid #666;
+    background-color: #fff;
+    display: block;
+    margin: auto;
+}
