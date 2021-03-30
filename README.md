@@ -1,2 +1,3 @@
-# spelprogrammering-javascript
- Eksempel på spel laga i Javascript.
+# Spelprogrammering i Javascript
+Ulike eksempel på spel laga i Javascript.
+"flakseFugl", "Pong" og "Snake" henta frå Kode 2.
