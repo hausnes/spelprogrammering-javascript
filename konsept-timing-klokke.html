@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Klokkeslett</title>
+        <meta charset="UTF-8">
+        <style>
+            html, body { margin: 0; padding: 0; height: 100%; width: 100%; }
+            body { display: flex; flex-direction: column; justify-content: center; align-items: center;} 
+            main { background-color: black; color: white; padding: 30px; text-align: center; }
+        </style>
+    </head>
+    <body>
+        <main>
+            <p>Verdens beste klokke</p>
+            <h1>
+                Klokka er no:<br> 
+                <span id="tidspunkt">Feil ved visning</span>
+            </h1>
+        </main>
+        
+        <!-- Kode -->
+        <script>
+            function oppdaterTid() {
+                var tid = new Date();
+                var timer = tid.getHours();
+                var minutter = tid.getMinutes();
+                var sekunder = tid.getSeconds();
+                
+                var tidspunkt = document.getElementById("tidspunkt"); // Hentar elementet "tidspunkt" frå HTML. Sjå etter ID-en der.
+                tidspunkt.innerHTML = timer + ":" + minutter + ":" + sekunder; // Endrar den indre HTML-en til elementet i førre punkt.
+            }
+
+            setInterval(oppdaterTid,1000); // Kaller på funksjonen oppdaterTid kvart sekund
+            
+            // Kan eventuelt bruke setTimeout
+            /* 
+            function oppdaterTid() {
+                var tid = new Date();
+                var timer = tid.getHours();
+                var minutter = tid.getMinutes();
+                var sekunder = tid.getSeconds();
+                
+                var tidspunkt = document.getElementById("tidspunkt"); // Hentar elementet "tidspunkt" frå HTML. Sjå etter ID-en der.
+                tidspunkt.innerHTML = timer + ":" + minutter + ":" + sekunder; // Endrar den indre HTML-en til elementet i førre punkt.
+
+                setTimeout(oppdaterTid,1000); // Kaller på funksjonen oppdaterTid kvart sekund
+            }
+            oppdaterTid();
+            */
+        </script>
+    </body>
+</html>
