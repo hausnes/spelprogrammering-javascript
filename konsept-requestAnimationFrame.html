@@ -7,37 +7,37 @@
     </head>
     <body>
 
-    <canvas id="spelCanvas" width="640" height="480"></canvas>
+        <canvas id="spelCanvas" width="640" height="480"></canvas>
 
-    <script>
-        var canvas = document.getElementById("spelCanvas");
-        var ctx = canvas.getContext("2d");
-        
-        var x = 90; // x-posisjonen til ballen, ved oppstart
-        var y = 300; // y-posisjonen til ballen, ved oppstart
-        var fartx = 1;
-        var ballRadius = 10;
+        <script>
+            var canvas = document.getElementById("spelCanvas");
+            var ctx = canvas.getContext("2d");
+            
+            var x = 90; // x-posisjonen til ballen, ved oppstart
+            var y = 300; // y-posisjonen til ballen, ved oppstart
+            var fartx = 1;
+            var ballRadius = 10;
 
-        function drawBall() {
-            ctx.beginPath();
-            ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-            ctx.fillStyle = "#0095DD";
-            ctx.fill();
-            ctx.closePath();
-        }
+            function drawBall() {
+                ctx.beginPath();
+                ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+                ctx.fillStyle = "#0095DD";
+                ctx.fill();
+                ctx.closePath();
+            }
 
-        function draw() {
-            //  Her plasserer me det som skal skje
-            //ctx.clearRect(0, 0, canvas.width, canvas.height);
-            drawBall();
-            x += fartx;
-            //ballRadius += 0.1;
-            requestAnimationFrame(draw);
-            // https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
-        }
+            function draw() {
+                //  Her plasserer me det som skal skje
+                //ctx.clearRect(0, 0, canvas.width, canvas.height);
+                drawBall();
+                x += fartx;
+                //ballRadius += 0.1;
+                requestAnimationFrame(draw);
+                // https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
+            }
 
-        draw();
-    </script>
+            draw();
+        </script>
 
     </body>
 </html>
