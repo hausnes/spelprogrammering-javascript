@@ -8,8 +8,6 @@ var ctx = minCanvas.getContext("2d");
 var info = document.getElementById("info");
 
 var poeng = 0;
-var fartsokning = 1;
-var fartsokningVerdi = 0;
 
 if(localStorage.rekord === undefined) { //Er det satt rekord fra før
     localStorage.rekord = 0; //Hvis ikke, setter vi rekorden til 0
